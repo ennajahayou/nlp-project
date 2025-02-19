@@ -1,0 +1,17 @@
+# Chemins
+data_directory: "./data"
+persist_directory: "./vectorstore"
+
+# Paramètres d'indexation
+chunk_size: 500
+chunk_overlap: 50
+
+# Modèle d'embeddings Hugging Face
+embedding_model_name: "sentence-transformers/all-mpnet-base-v2"
+
+# Modèle LLM pour la génération (exemple avec FLAN-T5)
+llm_model_name: "google/flan-t5-base"
+
+# Paramètres du chatbot / Q&A
+retriever_top_k: 4
+chain_type: "stuff"  # 'stuff', 'map_reduce', 'refine' ou 'map_rerank' par ex
