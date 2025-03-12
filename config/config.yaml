@@ -1,0 +1,8 @@
+# for all configuration options in our project
+
+data_path: "../data"
+embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
+vector_store_path: "../chroma_db"
+chunk_size: 500
+chunk_overlap: 50 ## continuty between chunks exemple ( take 50 token from first chunk and put it into the second and so one so forth)
+retrieval_top_k: 5

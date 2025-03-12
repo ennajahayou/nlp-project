@@ -1,32 +1,45 @@
+import os
+import yaml
+import chromadb
 from langchain.vectorstores import Chroma
 from langchain.embeddings import HuggingFaceEmbeddings
-from typing import List
-import os
 
 class DocumentRetriever:
-    def __init__(self, config: dict):
-        self.config = config
-        self.embedding_model_name = config["embedding_model_name"]
-        self.embeddings = HuggingFaceEmbeddings(model_name=self.embedding_model_name)
-        self.persist_directory = config["persist_directory"]
+    def __init__(self, config_path: str):
         
-        # Charger la base vectorielle existante
-        if os.path.exists(self.persist_directory):
-            self.vectordb = Chroma(
-                persist_directory=self.persist_directory,
-                embedding_function=self.embeddings
-            )
-        else:
-            raise ValueError(f"Le dossier {self.persist_directory} n'existe pas. Veuillez lancer l'indexation avant.")
-    
-    def get_relevant_documents(self, query: str, k: int = 4):
+
+        ## Initializes the DocumentRetriever
+
+        with open(config_path, 'r') as file:
+            config = yaml.safe_load(file)
+        
+        self.vector_store_path = config['vector_store_path']
+        self.embedding_model = config['embedding_model']
+        self.embedder = HuggingFaceEmbeddings(model_name=self.embedding_model)
+        self.client = Chroma(persist_directory=self.vector_store_path, embedding_function=self.embedder)
+
+    def search_documents(self, query: str, top_k: int = 5):
+
+
+        query_embedding = self.embedder.embed_query(query)[0]
+        results = self.client.similarity_search(query_embedding, k=top_k)
+        
+        return [(result.metadata, result.page_content) for result in results]
+
+    def display_results(self, query: str, top_k: int = 5):
         """
-        Retourne une liste de tuples (document, score) pour les k documents les plus pertinents
+        Displays search results for a given query.
+        :param query: The search query.
+        :param top_k: Number of top results to return.
         """
-        # similarity_search_by_vector peut également retourner les scores (selon version de langchain)
-        # On peut contourner en faisant un vectordb.similarity_search_with_score(...)
-        
-        docs_with_scores = self.vectordb.similarity_search_with_score(query, k=k)
-        
-        # docs_with_scores est une liste de tuples (Document, float)
-        return docs_with_scores
+        results = self.search_documents(query, top_k)
+        print(f"Search results for query: '{query}'")
+        for i, (metadata, content) in enumerate(results):
+            print(f"\nResult {i+1}:")
+            print(f"Metadata: {metadata}")
+            print(f"Content: {content[:500]}...")
+
+# Example usage
+if __name__ == "__main__":
+    retriever = DocumentRetriever(config_path="../config/config.yaml")
+    retriever.display_results("What is self-driving technology?", top_k=3)
