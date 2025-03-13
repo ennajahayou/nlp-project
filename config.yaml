@@ -9,8 +9,10 @@ chunk_overlap: 50
 # Modèle d'embeddings Hugging Face
 embedding_model_name: "sentence-transformers/all-mpnet-base-v2"
 
-# Modèle LLM pour la génération (exemple avec FLAN-T5)
-llm_model_name: "google/flan-t5-base"
+# Modèle LLM pour la génération (Mistral au lieu de FLAN-T5)
+llm_model_name: "mistralai/Mistral-7B-Instruct-v0.2"
+model_temperature: 0.1
+model_max_length: 2048
 
 # Paramètres du chatbot / Q&A
 retriever_top_k: 4
