@@ -4,7 +4,7 @@ import os
 
 from src.data_loader import DataLoader
 from src.indexer import DocumentIndexer
-from src.retriever import DocumentRetriever
+from src.retrieer import DocumentRetriever
 from src.rag_qa import RAGQA
 from src.evaluation import Evaluation
 from src.chatbot import ChatBot

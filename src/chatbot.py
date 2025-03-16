@@ -1,6 +1,8 @@
 from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferMemory
 from langchain.llms import HuggingFacePipeline
+from transformers import BitsAndBytesConfig
+
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 import torch
 from langchain.prompts import PromptTemplate
@@ -19,12 +21,21 @@ class ChatBot:
         
         tokenizer = AutoTokenizer.from_pretrained(model_name)
         
+        
+        
         # Configuration pour optimiser l'utilisation mémoire
         model = AutoModelForCausalLM.from_pretrained(
             model_name,
             torch_dtype=torch.bfloat16,
             device_map="auto", 
-            load_in_8bit=True  # Pour économiser la mémoire
+            quantization_config=quant_config,
+            
+            llm_int8_enable_fp32_cpu_offload=True,
+             # ou load_in_4bit selon votre besoin
+        
+           
+           
+           # Pour économiser la mémoire
         )
         
         hf_pipeline = pipeline(
