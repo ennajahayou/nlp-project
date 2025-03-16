@@ -21,7 +21,10 @@ class ChatBot:
         
         tokenizer = AutoTokenizer.from_pretrained(model_name)
         
-        
+        quant_config = BitsAndBytesConfig(
+            llm_int8_enable_fp32_cpu_offload=True,
+            load_in_8bit=True,  # ou load_in_4bit selon votre besoin
+        )
         
         # Configuration pour optimiser l'utilisation mémoire
         model = AutoModelForCausalLM.from_pretrained(
@@ -29,10 +32,6 @@ class ChatBot:
             torch_dtype=torch.bfloat16,
             device_map="auto", 
             quantization_config=quant_config,
-            
-            llm_int8_enable_fp32_cpu_offload=True,
-             # ou load_in_4bit selon votre besoin
-        
            
            
            # Pour économiser la mémoire
