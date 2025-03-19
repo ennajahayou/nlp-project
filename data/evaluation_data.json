@@ -1,0 +1,22 @@
+[
+  {
+    "question": "Qu'est-ce qu'un perceptron en Deep Learning ?",
+    "reference_answer": "Un perceptron est un réseau neuronal constitué d'un seul neurone, qui prend un vecteur en entrée et applique une fonction d'activation pour produire une sortie."
+  },
+  {
+    "question": "Pourquoi utilise-t-on la descente de gradient en Deep Learning ?",
+    "reference_answer": "La descente de gradient est utilisée pour minimiser la fonction de perte en mettant à jour les poids du réseau de manière itérative dans la direction du gradient négatif."
+  },
+  {
+    "question": "Quelle est la principale fonction de perte utilisée pour la régression ?",
+    "reference_answer": "L'erreur quadratique moyenne (Mean Squared Error, MSE) est la fonction de perte la plus couramment utilisée en régression."
+  },
+  {
+    "question": "Quels sont les avantages des réseaux de neurones convolutifs (CNN) ?",
+    "reference_answer": "Les CNN exploitent la structure spatiale des données, réduisent le nombre de paramètres à apprendre et sont efficaces pour la classification d'images grâce aux couches de convolution et de pooling."
+  },
+  {
+    "question": "En quoi consiste la régularisation DropOut ?",
+    "reference_answer": "La régularisation DropOut consiste à désactiver aléatoirement des neurones pendant l'apprentissage pour éviter le surajustement et améliorer la généralisation du modèle."
+  }
+]

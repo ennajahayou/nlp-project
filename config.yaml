@@ -1,0 +1,122 @@
+# config.yaml
+
+# Document Indexing Configuration
+indexing:
+  # Vector database configuration
+  vector_db:
+    type: "chroma"  # Currently only ChromaDB is supported
+    path: "./chroma_db"
+  
+  # Document processing configuration
+  document_processing:
+    chunk_size: 1000
+    chunk_overlap: 200
+  
+  # Embedding model configuration
+  embeddings:
+    model: "BAAI/bge-m3"  # Using BGE-M3 model for better embedding quality
+    # Other options:
+    # - "BAAI/bge-small-en-v1.5" (smaller, compatible with newer Python/TF versions)
+    # - "sentence-transformers/all-MiniLM-L6-v2" (good balance, may require tf-keras)
+    # - "sentence-transformers/all-mpnet-base-v2" (high quality, no TF dependency)
+    # - "openai:text-embedding-ada-002" (requires OpenAI API key in env variables)
+
+# Data sources configuration
+data:
+  # Directory containing documents to be indexed
+  documents_dir: "./data"
+
+# Retrieval configuration
+retrieval:
+  # Number of results to return by default
+  top_k: 5
+  
+  # Minimum relevance score (0-100) to include in results
+  min_score: 50
+  
+  # Whether to return full text or just snippets in CLI output
+  show_full_text: false
+
+# QA System Configuration
+qa_system:
+  # Default LLM model to use
+  default_model: "deepseek"
+  
+  # Maximum context length to send to the LLM
+  max_context_length: 3000
+  
+  # Number of documents to retrieve for context
+  top_k: 5
+  
+  # LLM configuration
+  llm:
+    # Model configurations
+    models:
+      deepseek:
+        temperature: 0.7
+        max_length: 1024
+      
+      mistral:
+        temperature: 0.7
+        max_length: 1024
+      
+      phi:
+        temperature: 0.7
+        max_length: 1024
+
+# Evaluation Configuration
+evaluation:
+  # Output directory for evaluation results
+  output_dir: "./evaluation_results"
+  
+  # Default evaluation metrics to track
+  metrics:
+    # Content relevance metrics
+    - rouge1_f1
+    - rouge2_f1
+    - rougeL_f1
+    - bleu_score
+    - semantic_similarity
+    
+    # Context utilization metrics
+    - context_utilization
+    - context_relevance
+    - potential_hallucination_score
+    
+    # Answer quality metrics
+    - answer_length
+  
+  # Visualization settings
+  visualizations:
+    enabled: true
+    formats:
+      - png
+      - csv
+    
+  # Default evaluation dataset
+  evaluation_data_path: "./data/evaluation_data.json"
+
+# Chatbot Configuration
+chatbot:
+  # Default LLM model to use
+  model: "deepseek"
+  
+  # Number of documents to retrieve for context
+  top_k: 5
+  
+  # Maximum context length to send to the LLM
+  max_context_length: 3000
+  
+  # Conversation history settings
+  history_size: 5  # Number of recent exchanges to include in the prompt
+  max_history_tokens: 1000  # Maximum number of tokens from history to include
+  
+  # Directory to store conversation history
+  conversations_dir: "./conversations"
+  
+  # Persona configuration
+  persona: "Vous êtes un assistant IA expert qui répond aux questions en utilisant les informations fournies dans les documents de référence."
+  
+  # Response settings
+  include_sources: true  # Whether to mention sources in responses
+  verbose_mode: false  # Whether to include detailed debugging information

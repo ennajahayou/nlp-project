@@ -1,0 +1,93 @@
+{
+  "conversation_id": "conv_20250317_185719",
+  "messages": [
+    {
+      "role": "user",
+      "content": "c'est quoi le deep learning",
+      "timestamp": "2025-03-17T18:57:46.681649"
+    },
+    {
+      "role": "assistant",
+      "content": "Vous êtes un assistant IA expert qui répond aux questions en utilisant les informations fournies dans le contexte documentaire et qui maintient une conversation cohérente en tenant compte de l'historique du dialogue.\n\nHISTORIQUE DE LA CONVERSATION:",
+      "timestamp": "2025-03-17T18:58:03.695996",
+      "metadata": {
+        "sources": [
+          {
+            "name": "NIPS-2017-attention-is-all-you-need-Paper.pdf",
+            "relevance": 4.23
+          },
+          {
+            "name": "book_fr.pdf",
+            "relevance": 3.89
+          }
+        ]
+      }
+    },
+    {
+      "role": "user",
+      "content": "",
+      "timestamp": "2025-03-17T19:09:48.159985"
+    },
+    {
+      "role": "assistant",
+      "content": "Vous êtes un assistant IA expert qui répond aux questions en utilisant les informations fournies dans le contexte documentaire et qui maintient une conversation cohérente en tenant compte de l'historique du dialogue.\n\nHISTORIQUE DE LA CONVERSATION:",
+      "timestamp": "2025-03-17T19:10:03.063993",
+      "metadata": {
+        "sources": [
+          {
+            "name": "book_fr.pdf",
+            "relevance": 0.0
+          },
+          {
+            "name": "doc_eco3.pdf",
+            "relevance": 0.0
+          }
+        ]
+      }
+    },
+    {
+      "role": "user",
+      "content": "exit",
+      "timestamp": "2025-03-17T19:10:17.634676"
+    },
+    {
+      "role": "assistant",
+      "content": "Vous êtes un assistant IA expert qui répond aux questions en utilisant les informations fournies dans le contexte documentaire et qui maintient une conversation cohérente en tenant compte de l'historique du dialogue.\n\nHISTORIQUE DE LA CONVERSATION:",
+      "timestamp": "2025-03-17T19:10:32.680119",
+      "metadata": {
+        "sources": [
+          {
+            "name": "book_fr.pdf",
+            "relevance": 0.0
+          },
+          {
+            "name": "doc_eco1.pdf",
+            "relevance": 0.0
+          }
+        ]
+      }
+    },
+    {
+      "role": "user",
+      "content": "4",
+      "timestamp": "2025-03-17T19:10:52.530406"
+    },
+    {
+      "role": "assistant",
+      "content": "Vous êtes un assistant IA expert qui répond aux questions en utilisant les informations fournies dans le contexte documentaire et qui maintient une conversation cohérente en tenant compte de l'historique du dialogue.\n\nHISTORIQUE DE LA CONVERSATION:",
+      "timestamp": "2025-03-17T19:11:07.435270",
+      "metadata": {
+        "sources": [
+          {
+            "name": "book_fr.pdf",
+            "relevance": 6.07
+          },
+          {
+            "name": "doc_eco1.pdf",
+            "relevance": 0.0
+          }
+        ]
+      }
+    }
+  ]
+}

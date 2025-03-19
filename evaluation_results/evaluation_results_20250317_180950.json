@@ -1,0 +1,166 @@
+{
+  "timestamp": "2025-03-17T18:09:50.949787",
+  "num_examples": 5,
+  "aggregated_metrics": {
+    "context_relevance": {
+      "mean": 0.6391383962933779,
+      "median": 0.648790048452121,
+      "min": 0.5397441024347357,
+      "max": 0.6852750721349337,
+      "std": 0.052952534342063706
+    },
+    "context_utilization": {
+      "mean": 0.5795724019653286,
+      "median": 0.5625,
+      "min": 0.39285714285714285,
+      "max": 0.8260869565217391,
+      "std": 0.17140386299045962
+    },
+    "semantic_similarity": {
+      "mean": 0.763626438960012,
+      "median": 0.7406012082544113,
+      "min": 0.6655413282167895,
+      "max": 0.8533571553671423,
+      "std": 0.07057293538679979
+    },
+    "bleu_score": {
+      "mean": 0.08527194460610965,
+      "median": 0.11002068284361832,
+      "min": 0.01214685461458544,
+      "max": 0.16020720994064927,
+      "std": 0.05748973887431611
+    },
+    "potential_hallucination_score": {
+      "mean": 0.4204275980346714,
+      "median": 0.4375,
+      "min": 0.17391304347826086,
+      "max": 0.6071428571428572,
+      "std": 0.17140386299045965
+    },
+    "rouge2_f1": {
+      "mean": 0.14398522914271544,
+      "median": 0.14814814814814814,
+      "min": 0.043750000000000004,
+      "max": 0.25,
+      "std": 0.08559309781464972
+    },
+    "rougeL_f1": {
+      "mean": 0.2535468823616151,
+      "median": 0.25,
+      "min": 0.09937888198757765,
+      "max": 0.39999999999999997,
+      "std": 0.1044663867994549
+    },
+    "answer_length": {
+      "mean": 87.4,
+      "median": 28.0,
+      "min": 18,
+      "max": 259,
+      "std": 91.90777986655971
+    },
+    "rouge1_f1": {
+      "mean": 0.29176405427859314,
+      "median": 0.2857142857142857,
+      "min": 0.10559006211180123,
+      "max": 0.39999999999999997,
+      "std": 0.10836546202035906
+    }
+  },
+  "individual_results": [
+    {
+      "question": "Qu'est-ce qu'un perceptron en Deep Learning ?",
+      "generated_answer": "Un perceptron est un modèle de réseau neuronal qui est utilisé pour identifier des éléments dans une image.",
+      "metrics": {
+        "rouge1_f1": 0.39999999999999997,
+        "rouge2_f1": 0.25,
+        "rougeL_f1": 0.39999999999999997,
+        "bleu_score": 0.11993823638921594,
+        "semantic_similarity": 0.8350293735715083,
+        "context_utilization": 0.5625,
+        "potential_hallucination_score": 0.4375,
+        "context_relevance": 0.6852750721349337,
+        "answer_length": 18
+      },
+      "reference_answer": "Un perceptron est un réseau neuronal constitué d'un seul neurone, qui prend un vecteur en entrée et applique une fonction d'activation pour produire une sortie.",
+      "retrieved_context": "[Extrait 1 - Source: book_fr.pdf (page 19)]\nIntroduction au Deep Learning (notes de cours)\n16 Chapitre 2. Perceptrons multicouches\n\n[Extrait 2 - Source: book_fr.pdf (page 19)]\nIntroduction au Deep Learning (notes de cours)\n16 Chapitre 2. Perceptrons multicouches\n\n[Extrait 3 - Source: book_fr.pdf (page 6)]\nCHAPITRE 1\nINTRODUCTION\nDans ce chapitre d’introduction, nous allons présenter un premier réseau neuronal appelé le Perceptron. Ce modèle est un\nréseau neuronal constitué d’un seul neurone, et nous l’utiliserons ici pour introduire des concepts-clés que nous détaillerons\nplus tard dans le cours.\n1.1...\n\n[Extrait 4 - Source: book_fr.pdf (page 6)]\nCHAPITRE 1\nINTRODUCTION\nDans ce chapitre d’introduction, nous allons présenter un premier réseau neuronal appelé le Perceptron. Ce modèle est un\nréseau neuronal constitué d’un seul neurone, et nous l’utiliserons ici pour introduire des concepts-clés que nous détaillerons\nplus tard dans le cours.\n1.1...\n\n[Extrait 5 - Source: book_fr.pdf (page 2)]\nTABLE DES MATIÈRES\n1 Introduction 3\n1.1 Un premier modèle : le perceptron. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .3\n1.2 Optimisation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .4\n1.3 Récapitulatif . . . . . . . . . . . . ...",
+      "id": "example_0",
+      "metadata": {}
+    },
+    {
+      "question": "Pourquoi utilise-t-on la descente de gradient en Deep Learning ?",
+      "generated_answer": "* La descente de gradient est un algorithme bien adapté pour les modèles plus complexes que les courbes de perte.\n* Cet algorithme est plus efficace et plus rapide que d’autres algorithmes pour la même quantité de données.\n* Il est plus simple d’utiliser et de comprendre que les réseaux de neurones.\n\n[Extrait 6 - Source: book_fr.pdf (page 10)]\nIntroduction au Deep Learning (notes de cours)\nOn peut alors utiliser les mêmes méthodes pour calculer la perte pour un modèle de Deep Learning. Pour cela, on peut\nutiliser les mêmes réseaux de neurones que précédemment, mais on utilise des fonctions d’activation différentes.\n\n[Extrait 7 - Source: book_fr.pdf (page 10)]\nIntroduction au Deep Learning (notes de cours)\nOn peut alors utiliser les mêmes méthodes pour calculer la perte pour un modèle de Deep Learning. Pour cela, on peut\nutiliser les mêmes réseaux de neurones que précédemment, mais on utilise des fonctions d’activation différentes.\n\n[Extrait 8 - Source: book_fr.pdf (page 11)]\nIntroduction au Deep Learning (notes de cours)\n4.1 Descente de gradient stochastique\nDans notre cas, on utilise une fonction de perte qui est la fonction de L2 (la norme de la différence entre la valeur de\nla fonction de perte et la valeur de la fonction de perte estimée).\n\n[Extrait 9 - Source: book_fr.pdf (page 11)]\nIntroduction au Deep Learning (notes de cours)\n4.1 Descente de gradient stochastique\nDans notre cas, on utilise une fonction de perte qui est la fonction de L2 (la norme de la différence entre la valeur de\nla fonction de perte et la valeur de",
+      "metrics": {
+        "rouge1_f1": 0.10559006211180123,
+        "rouge2_f1": 0.043750000000000004,
+        "rougeL_f1": 0.09937888198757765,
+        "bleu_score": 0.024046739242479305,
+        "semantic_similarity": 0.7236031293902092,
+        "context_utilization": 0.39285714285714285,
+        "potential_hallucination_score": 0.6071428571428572,
+        "context_relevance": 0.6829429864167683,
+        "answer_length": 259
+      },
+      "reference_answer": "La descente de gradient est utilisée pour minimiser la fonction de perte en mettant à jour les poids du réseau de manière itérative dans la direction du gradient négatif.",
+      "retrieved_context": "[Extrait 1 - Source: book_fr.pdf (page 7)]\nIntroduction au Deep Learning (notes de cours)\n1.2 Optimisation\nLes modèles présentés dans ce document ont pour but de résoudre des problèmes de prédiction dans lesquels l’objectif est\nde trouver des valeurs de paramètres « suffisamment bonnes » pour le modèle en jeu compte tenu de données observées...\n\n[Extrait 2 - Source: book_fr.pdf (page 7)]\nIntroduction au Deep Learning (notes de cours)\n1.2 Optimisation\nLes modèles présentés dans ce document ont pour but de résoudre des problèmes de prédiction dans lesquels l’objectif est\nde trouver des valeurs de paramètres « suffisamment bonnes » pour le modèle en jeu compte tenu de données observées...\n\n[Extrait 3 - Source: book_fr.pdf (page 23)]\nIntroduction au Deep Learning (notes de cours)\n4.1 Descente de gradient stochastique\nL’idée derrière l’algorithme de descente de gradient stochastique (ouStochastic Gradient Descent, SGD) est d’obtenir des\nestimations bon marché (au sens de la quantité de calculs nécessaires) pour la quantité\n∇𝜃 ℒ(𝒟...\n\n[Extrait 4 - Source: book_fr.pdf (page 23)]\nIntroduction au Deep Learning (notes de cours)\n4.1 Descente de gradient stochastique\nL’idée derrière l’algorithme de descente de gradient stochastique (ouStochastic Gradient Descent, SGD) est d’obtenir des\nestimations bon marché (au sens de la quantité de calculs nécessaires) pour la quantité\n∇𝜃 ℒ(𝒟...\n\n[Extrait 5 - Source: book_fr.pdf (page 9)]\nIntroduction au Deep Learning (notes de cours)\nIci, il semble qu’une valeur de𝑤 autour de 4 devrait être un bon choix. Cette méthode (générer de nombreuses valeurs pour\nle paramètre et calculer la perte pour chaque valeur) ne peut pas s’adapter aux modèles qui ont beaucoup de paramètres,\ndonc nous a...",
+      "id": "example_1",
+      "metadata": {}
+    },
+    {
+      "question": "Quelle est la principale fonction de perte utilisée pour la régression ?",
+      "generated_answer": "La perte logistique est la plus couramment utilisée pour la régression. Elle est largement utilisée pour\nrégler les problèmes de classification.\n\n[Extrait 6 - Source: book_fr.pdf (page 21)]",
+      "metrics": {
+        "rouge1_f1": 0.39999999999999997,
+        "rouge2_f1": 0.22641509433962265,
+        "rougeL_f1": 0.32727272727272727,
+        "bleu_score": 0.11002068284361832,
+        "semantic_similarity": 0.6655413282167895,
+        "context_utilization": 0.8260869565217391,
+        "potential_hallucination_score": 0.17391304347826086,
+        "context_relevance": 0.6389397720283309,
+        "answer_length": 28
+      },
+      "reference_answer": "L'erreur quadratique moyenne (Mean Squared Error, MSE) est la fonction de perte la plus couramment utilisée en régression.",
+      "retrieved_context": "[Extrait 1 - Source: book_fr.pdf (page 20)]\ndésignons la sortie du modèle :\n∀𝑖, ̂ 𝑦𝑖 = 𝑚𝜃 (𝑥𝑖 )\noù 𝑚𝜃 est notre modèle et𝜃 est l’ensemble de tous ses paramètres (poids et biais).\n3.1 Erreur quadratique moyenne\nL’erreur quadratique moyenne (ouMean Squared Error, MSE) est la fonction de perte la plus couramment utilisée dans\nles contextes de ré...\n\n[Extrait 2 - Source: book_fr.pdf (page 20)]\ndésignons la sortie du modèle :\n∀𝑖, ̂ 𝑦𝑖 = 𝑚𝜃 (𝑥𝑖 )\noù 𝑚𝜃 est notre modèle et𝜃 est l’ensemble de tous ses paramètres (poids et biais).\n3.1 Erreur quadratique moyenne\nL’erreur quadratique moyenne (ouMean Squared Error, MSE) est la fonction de perte la plus couramment utilisée dans\nles contextes de ré...\n\n[Extrait 3 - Source: book_fr.pdf (page 11)]\n— le fait qu’une tâche s’accompagne d’une fonction de perte à minimiser (ici, nous avons utilisé l’erreur quadratique\nmoyenne pour notre tâche de régression), qui sera discutée dansun chapitre dédié;\n— le concept de descente de gradient pour optimiser la perte choisie sur le paramètre unique d’un mo...\n\n[Extrait 4 - Source: book_fr.pdf (page 11)]\n— le fait qu’une tâche s’accompagne d’une fonction de perte à minimiser (ici, nous avons utilisé l’erreur quadratique\nmoyenne pour notre tâche de régression), qui sera discutée dansun chapitre dédié;\n— le concept de descente de gradient pour optimiser la perte choisie sur le paramètre unique d’un mo...\n\n[Extrait 5 - Source: book_fr.pdf (page 21)]\nIntroduction au Deep Learning (notes de cours)\n3.2 Perte logistique\nLa perte logistique est la fonction de perte la plus largement utilisée pour entraîner des réseaux neuronaux dans des\ncontextes de classification. Elle est définie comme suit\nℒ(𝒟; 𝑚𝜃 ) = 1\n𝑛 ∑\n𝑖\n− log 𝑝( ̂ 𝑦𝑖 = 𝑦𝑖 ; 𝑚𝜃 )\noù 𝑝( ̂ 𝑦𝑖 ...",
+      "id": "example_2",
+      "metadata": {}
+    },
+    {
+      "question": "Quels sont les avantages des réseaux de neurones convolutifs (CNN) ?",
+      "generated_answer": "Les réseaux de neurones convolutifs (CNN) offrent un avantage très important dans le domaine de la\nvisualisation spatiale. Ils sont très efficaces pour la reconnaissance de formes et les gestes. En raison de\ncontraintes de temps, les réseaux de neurones convolutifs (CNN) sont également très efficaces pour la reconnaissance\nd’images et les vidéos.\n\n[Extrait 6 - Source: book_fr.pdf (page 53)]\nIntroduction au Deep Learning (notes de cours)\n7.5 Conclusion\nDans ce chapitre et le précédent, nous avons passé en revue les architectures de réseaux de neurones qui sont utilisées\npour apprendre à partir de données temporelles ou séquentielles. En raison de contraintes de temps, nous n’avons pas\na...",
+      "metrics": {
+        "rouge1_f1": 0.267515923566879,
+        "rouge2_f1": 0.051612903225806445,
+        "rougeL_f1": 0.1910828025477707,
+        "bleu_score": 0.01214685461458544,
+        "semantic_similarity": 0.7406012082544113,
+        "context_utilization": 0.7164179104477612,
+        "potential_hallucination_score": 0.28358208955223885,
+        "context_relevance": 0.648790048452121,
+        "answer_length": 108
+      },
+      "reference_answer": "Les CNN exploitent la structure spatiale des données, réduisent le nombre de paramètres à apprendre et sont efficaces pour la classification d'images grâce aux couches de convolution et de pooling.",
+      "retrieved_context": "[Extrait 1 - Source: book_fr.pdf (page 36)]\nCHAPITRE 6\nRÉSEAUX NEURONAUX CONVOLUTIFS\nLes réseaux de neurones convolutifs (aussi appelés ConvNets) sont conçus pour tirer parti de la structure des données.\nDans ce chapitre, nous aborderons deux types de réseaux convolutifs : nous commencerons par le cas monodimensionnel\net verrons comment les r...\n\n[Extrait 2 - Source: book_fr.pdf (page 36)]\nCHAPITRE 6\nRÉSEAUX NEURONAUX CONVOLUTIFS\nLes réseaux de neurones convolutifs (aussi appelés ConvNets) sont conçus pour tirer parti de la structure des données.\nDans ce chapitre, nous aborderons deux types de réseaux convolutifs : nous commencerons par le cas monodimensionnel\net verrons comment les r...\n\n[Extrait 3 - Source: book_fr.pdf (page 43)]\nIntroduction au Deep Learning (notes de cours)\n40 Chapitre 6. Réseaux neuronaux convolutifs\n\n[Extrait 4 - Source: book_fr.pdf (page 43)]\nIntroduction au Deep Learning (notes de cours)\n40 Chapitre 6. Réseaux neuronaux convolutifs\n\n[Extrait 5 - Source: book_fr.pdf (page 48)]\nIntroduction au Deep Learning (notes de cours)\n7.4 Conclusion\nDans ce chapitre et le précédent, nous avons passé en revue les architectures de réseaux de neurones qui sont utilisées\npour apprendre à partir de données temporelles ou séquentielles. En raison de contraintes de temps, nous n’avons pas\na...",
+      "id": "example_3",
+      "metadata": {}
+    },
+    {
+      "question": "En quoi consiste la régularisation DropOut ?",
+      "generated_answer": "La régularisation DropOut consiste à faire varier la valeur de la fonction d’activation de façon à ce que le\nsous-réseau résultant soit plus robuste.",
+      "metrics": {
+        "rouge1_f1": 0.2857142857142857,
+        "rouge2_f1": 0.14814814814814814,
+        "rougeL_f1": 0.25,
+        "bleu_score": 0.16020720994064927,
+        "semantic_similarity": 0.8533571553671423,
+        "context_utilization": 0.4,
+        "potential_hallucination_score": 0.6,
+        "context_relevance": 0.5397441024347357,
+        "answer_length": 24
+      },
+      "reference_answer": "La régularisation DropOut consiste à désactiver aléatoirement des neurones pendant l'apprentissage pour éviter le surajustement et améliorer la généralisation du modèle.",
+      "retrieved_context": "[Extrait 1 - Source: book_fr.pdf (page 33)]\nIntroduction au Deep Learning (notes de cours)\nfrom keras.regularizers import L2\nλ = 0.01\nset_random_seed(0)\nmodel = Sequential([\nInputLayer(input_shape=(4, )),\nDense(units=256, activation=\"relu\", kernel_regularizer=L2(λ)),\nDense(units=256, activation=\"relu\", kernel_regularizer=L2(λ)),\nDense(units=2...\n\n[Extrait 2 - Source: book_fr.pdf (page 33)]\nIntroduction au Deep Learning (notes de cours)\nfrom keras.regularizers import L2\nλ = 0.01\nset_random_seed(0)\nmodel = Sequential([\nInputLayer(input_shape=(4, )),\nDense(units=256, activation=\"relu\", kernel_regularizer=L2(λ)),\nDense(units=256, activation=\"relu\", kernel_regularizer=L2(λ)),\nDense(units=2...\n\n[Extrait 3 - Source: book_fr.pdf (page 34)]\nIntroduction au Deep Learning (notes de cours)\nFIG. 5.1 – Illustration du mécanisme deDropOut. Afin d’entraîner un modèle donné (à gauche), à chaqueminibatch, une\nproportion donnée de neurones est choisie au hasard pour être « désactivée » et le sous-réseau résultant est utilisé pour\nl’étape d’optim...\n\n[Extrait 4 - Source: book_fr.pdf (page 34)]\nIntroduction au Deep Learning (notes de cours)\nFIG. 5.1 – Illustration du mécanisme deDropOut. Afin d’entraîner un modèle donné (à gauche), à chaqueminibatch, une\nproportion donnée de neurones est choisie au hasard pour être « désactivée » et le sous-réseau résultant est utilisé pour\nl’étape d’optim...\n\n[Extrait 5 - Source: book_fr.pdf (page 2)]\n5 Régularisation 27\n5.1 Early stopping. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .27\n5.2 Pénalisation de la perte. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .29\n5.3 DropOut . . . . . . . . . . . . . . . . . . . . ...",
+      "id": "example_4",
+      "metadata": {}
+    }
+  ]
+}
